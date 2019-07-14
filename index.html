@@ -38,8 +38,11 @@
     <script>
       (function() {
         'use strict';
-        let quote = document.getElementById("quote");
-        quote.innerHTML = "Enlist 3 things you are grateful for."
+        let quote = document.getElementById("quote")
+        let path = window.location.pathname
+        let parameter = path.split('/')
+        if(parameter[2] == undefined) quote.innerHTML = "Enlist 3 things you are grateful for."
+        else quote.innerHTML = parameter[2]
       })();
     </script>
   </body>
