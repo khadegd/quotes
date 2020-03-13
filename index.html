@@ -6,12 +6,12 @@
     <meta name="description" content="">
     <meta name="author" content="Ganesh Khade">
     <link rel="icon" href="./favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
     <title>Quotes</title>
     <style type="text/css" media="screen">
         .bg-light {
-          background: white;
+          background: #24282E;
         }
 
         .container {
@@ -21,25 +21,30 @@
         }
 
         .big-font {
-          font-family: "Roboto", serif;
+          font-family: "Inter", sans-serif;
           font-size: 6.5vh;
           text-align: right;
           margin-top: 15vh;
-          color: #607d8b;
+          color: white;
         }
     </style>
   </head>
 
   <body class="bg-light">
     <div class="container">
-        <div id="quote" class="big-font">information diet, 100 days!</div>
+        <div id="quote" class="big-font">Information diet, 100 days!</div>
+        <p id="days"></p>
     </div>
 
     <script>
-      (function() {
+     (function() {
         'use strict';
-        // let quote = document.getElementById("quote")
-        // quote.innerHTML = "Focus."
+        var _MS_PER_DAY = 1000 * 60 * 60 * 24;
+        var birthday = new Date('March 13, 2020 12:43:00'),
+            today = new Date(),
+            difference = Math.floor((today - birthday)/_MS_PER_DAY),
+            number = document.getElementById("days");
+        number.innerHTML = difference.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       })();
     </script>
   </body>
