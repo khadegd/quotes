@@ -7,38 +7,51 @@
     <meta name="author" content="Ganesh Khade">
     <link rel="icon" href="./favicon.ico">
 
-    <title>Quotes</title>
+    <title>Focus</title>
     <style type="text/css" media="screen">
+        body {
+          margin-top: 45vh;
+
+          background: #282828;
+          color: #383838;
+
+          font-family: "Inter", sans-serif;
+          font-size: 17vh;
+          font-weight: 200;
+
+          text-align: right;
+        }
+
         .bg {
-          background: #24282E;
         }
 
         .container {
-          width: 60vw;
+          width: 70vw;
           margin-right: auto;
           margin-left: auto;
         }
 
-        .big-font {
+        .bg-font {
+          color: #383838;
+
           font-family: "Inter", sans-serif;
-          font-size: 6.5vh;
+          font-size: 17vh;
           text-align: right;
-          margin-top: 15vh;
-          color: white;
+          font-weight: 200;
         }
     </style>
   </head>
 
   <body class="bg">
     <div class="container">
-        <div id="quote" class="big-font">Information diet, 100 days!<br>Today's day #<span id="days"></span>.</div>
+        <div id="quote" class="big-font">day <span id="days"></span><br></div>
+    <span class='bg-font'>minimalism</span>
     </div>
-
     <script>
      (function() {
         'use strict';
         var _MS_PER_DAY = 1000 * 60 * 60 * 24;
-        var birthday = new Date('March 13, 2020 12:43:00'),
+        var birthday = new Date('Oct 06, 2020 18:21:00'),
             today = new Date(),
             difference = Math.floor((today - birthday)/_MS_PER_DAY),
             number = document.getElementById("days");
